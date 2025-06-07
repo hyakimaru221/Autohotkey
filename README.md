@@ -4,23 +4,6 @@ MsgBox, On
 While GetKeyState("Up", "P")
 {
     Send, {Up}
-    Sleep, 10
-}
-Return
-
-*Left::
-While GetKeyState("Left", "P")
-{
-    Send, {Left}
-    Sleep, 10
-}
-Return
-
-*Right::
-While GetKeyState("Right", "P")
-{
-    Send, {Right}
-    Sleep, 10
 }
 Return
 
