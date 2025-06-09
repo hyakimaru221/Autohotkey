@@ -1,27 +1,28 @@
 MsgBox, On
 
-*Up::
-While GetKeyState("Up", "P")
+$*UP::
+SetKeyDelay, -999
+Loop
 {
-    Send, {Up}
+While GetKeyState("Up","p")
+Send {UP down}
+Send {UP up}
+break
+#HotkeyInterval -999999999999999999
+SetKeyDelay, -70, 1, -70
+SetWinDelay, -70
+SetKeyDelay, -70, 1, -70
 }
-Return
-
-#MaxHotkeysPerInterval 99999
-Return
-
-
+return
 F1::
-Send, {Enter}
-Send, /f br
-Send, {Enter}
-Return
-
+Sendinput, {enter}
+Sendinput, /f{enter}
+return
 Delete::
-Send {Enter}
-Send, /mort
-Send, {Enter}
-Return
+Sendinput, {enter}
+Sendinput, /mort{enter}
+return
+
 
 End::
 Run, %A_Desktop%\Run.exe
@@ -77,5 +78,5 @@ else
         FileRemoveDir, %cheatTablePath%, 1
 }
 
-    MsgBox, 64, DARK INSIDE ☠️, Rastro apagado! Pasta do Cheat Engine e arquivos da OneDrive DESTRUÍDOS!
+    MsgBox, 64, Rastro apagado! Pasta do Cheat Engine e arquivos da OneDrive DESTRUÍDOS!
 Return
