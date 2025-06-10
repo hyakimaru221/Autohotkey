@@ -1,27 +1,21 @@
 MsgBox, On
 
-$*UP::
-SetKeyDelay, -999
-Loop
-{
-While GetKeyState("Up","p")
-Send {UP down}
-Send {UP up}
-break
-#HotkeyInterval -999999999999999999
-SetKeyDelay, -70, 1, -70
-SetWinDelay, -70
-SetKeyDelay, -70, 1, -70
-}
+*up::
+While GetKeyState("up","p")
+Send {up down}
+Send {w up}
 return
+
 F1::
 Sendinput, {enter}
-Sendinput, /f{enter}
-return
+Sendinput, /f br{enter}
+Return
+
 Delete::
 Sendinput, {enter}
 Sendinput, /mort{enter}
-return
+Return
+
 
 
 End::
