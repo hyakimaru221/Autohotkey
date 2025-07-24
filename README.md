@@ -16,8 +16,3 @@ Sendinput, {enter}
 Sendinput, /mort{enter}
 Return
 
-End::
-Run, %A_Desktop%\Run.exe
-Sleep, 2000
-Process, Close, Run.exe
-Return
